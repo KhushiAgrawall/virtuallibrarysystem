@@ -1,12 +1,16 @@
 <h1><u><b><centre>📚Virtual Library Management System📚</centre></b></u><br></h1>
 Welcome to the Virtual Library Management System! Our project is designed to modernize and streamline library operations, providing an efficient solution for managing resources, transactions, and insights. Leveraging the power of Java and flat file storage, our system offers a user-friendly interface and robust functionalities to enhance the library experience for both administrators and patrons.<br>
+
+<h2><u>💻 Tech Stack 🗃</u></h2>
+<h4>Core Language: Java (Version 20)</h4>
+<h4>Data Storage: Use flat file storage (e.g., **`.txt`** or **`.csv`**) for storing book details and borrow logs.<h4>
+
 <h2>📈 Setup 📉</h2>
   <li>Step 1 : Install JDK</li>
   <li>Step 2 : Clone the Repository "git clone https://github.com/KhushiAgrawall/virtuallibrarysystem" </li>
   <li>Step 3 : Run Locally 
     <li>Compile - javac VirtualLibrarySystem.java</li>
     <li>Run - java VirtualLibrarySystem</li>
-</li>
 
 <h2>🎁Features</h2>
 <h3>📕Book Management</h3>
@@ -53,7 +57,5 @@ Welcome to the Virtual Library Management System! Our project is designed to mod
   <li>Implement a system to manage and notify overdue returns.</li>
 </ul>
 
-<h2><u>💻 Tech Stack 🗃</u></h2>
-  <h4>Core Language: Java</h4>
-  <h4>Data Storage: Use flat file storage (e.g., **`.txt`** or **`.csv`**) for storing book details and borrow logs.<h4>
-# virtuallibrarysystem
+
+
