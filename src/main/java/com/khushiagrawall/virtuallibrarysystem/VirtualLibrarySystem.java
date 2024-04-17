@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VirtualLibrarySystem {
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         Library lib = new Library();
         //BookSearcher searcher = new BookSearcher(lib);
 
@@ -46,18 +46,18 @@ public class VirtualLibrarySystem {
 
     }
 
-    private static void displayWelcomeMessage() {
+    private  void displayWelcomeMessage() {
         System.out.println("📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔");
         System.out.println("📚          Virtual Library Management System (VLS)        📚");
     }
 
-    private static void showMainMenu() {
+    private  void showMainMenu() {
         System.out.println("📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘");
         displayMainMenuOptions();
         System.out.println("------------------------------------------------------------------");
     }
 
-    private static void displayMainMenuOptions() {
+    private  void displayMainMenuOptions() {
         System.out.println("1. Search for a book            \t2. 🚚 Borrow a book");
         System.out.println("3. Return a book                \t4. 📫 View Library Inventory");
         System.out.println("5. 💾 View Transaction Log      \t6. 👆 Upload Books");
@@ -65,7 +65,7 @@ public class VirtualLibrarySystem {
         System.out.println("9. Exit");
     }
 
-    private static void displayExitMessage() {
+    private  void displayExitMessage() {
         System.out.println("📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔");
         System.out.println("📔\tThank You for visitng. Come Back Soon  📕");
         System.out.println("📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔📕📗📘📙📔");
