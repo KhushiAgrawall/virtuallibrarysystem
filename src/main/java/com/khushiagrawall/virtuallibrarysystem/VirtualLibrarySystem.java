@@ -2,13 +2,12 @@ package com.khushiagrawall.virtuallibrarysystem;
 
 import com.khushiagrawall.virtuallibrarysystem.models.Library;
 import com.khushiagrawall.virtuallibrarysystem.utlis.ScannerUtils;
-import com.khushiagrawall.virtuallibrarysystem.operations.BookSearcher;
 import com.khushiagrawall.virtuallibrarysystem.commands.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Main {
+public class VirtualLibrarySystem {
     public static void main(String[] args) {
         Library lib = new Library();
         //BookSearcher searcher = new BookSearcher(lib);

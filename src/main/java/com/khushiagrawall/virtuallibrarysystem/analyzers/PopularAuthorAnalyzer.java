@@ -10,12 +10,12 @@ import java.util.stream.Collectors;
 
 public class PopularAuthorAnalyzer {
 
-    public static void analyzeAuthorTrends(List<Book> books, List<TransactionLog> logs) {
+    public  void analyzeAuthorTrends(List<Book> books, List<TransactionLog> logs) {
         Map<String, Integer> authorPopularity = calculateAuthorPopularity(books, logs);
         printAuthorPopularity(authorPopularity);
     }
 
-    private static Map<String, Integer> calculateAuthorPopularity(List<Book> books, List<TransactionLog> logs) {
+    private  Map<String, Integer> calculateAuthorPopularity(List<Book> books, List<TransactionLog> logs) {
         Map<String, Integer> authorPopularity = new HashMap<>();
         for (Book book : books) {
             int borrowCount = getBorrowCountForBook(book, logs);
@@ -30,13 +30,13 @@ public class PopularAuthorAnalyzer {
                         (e1, e2) -> e1, HashMap::new));
     }
 
-    private static int getBorrowCountForBook(Book book, List<TransactionLog> logs) {
+    private  int getBorrowCountForBook(Book book, List<TransactionLog> logs) {
         return (int) logs.stream()
                 .filter(log -> log.getISBN().equals(book.getISBN()))
                 .count();
     }
 
-    private static void printAuthorPopularity(Map<String, Integer> authorPopularity) {
+    private  void printAuthorPopularity(Map<String, Integer> authorPopularity) {
         System.out.println("Author Popularity:");
         authorPopularity.forEach((author, count) ->
                 System.out.println(author + ": " + count));

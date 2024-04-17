@@ -9,11 +9,11 @@ import java.util.List;
 public class BookStatisticsCalculator {
 
 
-    public static int getTotalBooks(List<Book> books) {
+    public  int getTotalBooks(List<Book> books) {
         return books.size();
     }
 
-    public static int getAvailableBooks(List<Book> books) {
+    public  int getAvailableBooks(List<Book> books) {
         int count = 0;
         for (Book book : books) {
             if (book.getNoOfCopies() > 0) {
@@ -23,7 +23,7 @@ public class BookStatisticsCalculator {
         return count;
     }
 
-    public static int getOutOfStockBooks(List<Book> books) {
+    public  int getOutOfStockBooks(List<Book> books) {
         int count = 0;
         for (Book book : books) {
             if (book.getNoOfCopies() == 0) {
@@ -33,7 +33,7 @@ public class BookStatisticsCalculator {
         return count;
     }
 
-    public static int getBorrowedBooks(List<TransactionLog> logs) {
+    public  int getBorrowedBooks(List<TransactionLog> logs) {
         int count = 0;
         for (TransactionLog log : logs) {
             if (log.getReturned().equalsIgnoreCase("No")) {
@@ -43,7 +43,7 @@ public class BookStatisticsCalculator {
         return count;
     }
 
-    public static void displayLibraryStatistics(List<Book> books,List<TransactionLog> log) {
+    public  void displayLibraryStatistics(List<Book> books,List<TransactionLog> log) {
         System.out.println("Library Statistics Overview:");
         System.out.println("Total Books: " + getTotalBooks(books));
         System.out.println("Available Books: " + getAvailableBooks(books));
@@ -51,7 +51,7 @@ public class BookStatisticsCalculator {
         System.out.println("Out of Stock Books: " + getOutOfStockBooks(books));
     }
 
-    public static int calculateCurrentlyBorrowedBooksCount(List<TransactionLog> logs) {
+    public  int calculateCurrentlyBorrowedBooksCount(List<TransactionLog> logs) {
         int count = 0;
         for (TransactionLog logEntry : logs) {
             if (logEntry.getReturned().equalsIgnoreCase("No")) {
@@ -61,7 +61,7 @@ public class BookStatisticsCalculator {
         return count;
     }
 
-    public static List<String> getAllBorrowedBookTitles(List<TransactionLog> logs,List<Book> books) {
+    public  List<String> getAllBorrowedBookTitles(List<TransactionLog> logs,List<Book> books) {
         List<String> borrowedTitles = new ArrayList<>();
         boolean booksBorrowed = false;
         for (TransactionLog logEntry : logs) {

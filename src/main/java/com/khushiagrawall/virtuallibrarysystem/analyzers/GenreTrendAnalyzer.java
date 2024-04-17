@@ -10,12 +10,12 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class GenreTrendAnalyzer {
-    public static void analyzeGenreTrends(List<Book> books, List<TransactionLog> logs) {
+    public  void analyzeGenreTrends(List<Book> books, List<TransactionLog> logs) {
         Map<String, Integer> genrePopularity = calculateGenrePopularity(books, logs);
         printGenrePopularity(genrePopularity);
     }
 
-    private static Map<String, Integer> calculateGenrePopularity(List<Book> books, List<TransactionLog> logs) {
+    private  Map<String, Integer> calculateGenrePopularity(List<Book> books, List<TransactionLog> logs) {
         Map<String, Integer> genrePopularity = new HashMap<>();
         for (Book book : books) {
             int borrowCount = getBorrowCountForBook(book, logs);
@@ -30,13 +30,13 @@ public class GenreTrendAnalyzer {
                         (e1, e2) -> e1, LinkedHashMap::new));
     }
 
-    private static int getBorrowCountForBook(Book book, List<TransactionLog> logs) {
+    private  int getBorrowCountForBook(Book book, List<TransactionLog> logs) {
         return (int) logs.stream()
                 .filter(log -> log.getISBN().equals(book.getISBN()))
                 .count();
     }
 
-    private static void printGenrePopularity(Map<String, Integer> genrePopularity) {
+    private  void printGenrePopularity(Map<String, Integer> genrePopularity) {
         System.out.println("Genre Popularity:");
         genrePopularity.forEach((genre, count) ->
                 System.out.println(genre + ": " + count));

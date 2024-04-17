@@ -9,7 +9,7 @@ import java.util.TreeMap;
 
 public class BorrowingTrendAnalyzer {
 
-    public static void analyzeBorrowingTrendsPerMonth(List<TransactionLog> log) {
+    public  void analyzeBorrowingTrendsPerMonth(List<TransactionLog> log) {
 
 
         if (log.isEmpty()) {
@@ -42,7 +42,7 @@ public class BorrowingTrendAnalyzer {
         }
     }
 
-    public static void analyzeBorrowingTrendsPerQuarter(List<TransactionLog> log) {
+    public  void analyzeBorrowingTrendsPerQuarter(List<TransactionLog> log) {
 
 
         if (log.isEmpty()) {
@@ -71,7 +71,7 @@ public class BorrowingTrendAnalyzer {
                 System.out.println("Quarter " + quarter + ": " + count + " books borrowed"));
     }
 
-    public static void analyzeBorrowingTrendsPerYear(List<TransactionLog> log, int year) {
+    public  void analyzeBorrowingTrendsPerYear(List<TransactionLog> log, int year) {
 
 
         if (log.isEmpty()) {
